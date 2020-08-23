@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
 { 
-   imports = [];
+   imports = [
+      ../profiles/graphical.nix
+   ];
 
-
-  networking.hostName = "hiro"; # Define your hostname.
+  networking.hostName = "qemu"; # Define your hostname.
 }
 
