@@ -4,9 +4,9 @@
   services.openssh = { 
      enable = true;
 
-     #permitRootLogin = "no";
+     permitRootLogin = "no";
  
-     #passwordAuthentication = false;
-     #challengeResponseAuthentication = false;
+     passwordAuthentication = false;
+     challengeResponseAuthentication = false;
   };
 }

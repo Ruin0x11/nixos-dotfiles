@@ -5,20 +5,21 @@
       ./channels.nix
       ./profiles/default.nix
       ./services/default.nix
-      ./users/hiro.nix
+      ./users/nori.nix
    ];
 
   nixpkgs.config.allowUnfree = true;
 
-  boot.initrd.kernelModules = [ "fbcon" ];
-  boot.kernelParams = [ "consoleblank=0" ];
+  # boot.initrd.kernelModules = [ "fbcon" ];
+  # boot.kernelParams = [ "consoleblank=0" ];
   boot.cleanTmpDir = true;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.ens3.useDHCP = true;
+  networking.interfaces.eno1.useDHCP = true;
+  networking.interfaces.eno2.useDHCP = true;
 
   networking.nameservers = [
       "192.168.1.100"
@@ -63,6 +64,7 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.extraConfig = "load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1";
 
   system.autoUpgrade.enable = true;
 
@@ -78,5 +80,8 @@
      "fs.inotify.max_user_watches" = 1048576;
      "fs.inotify.max_user_instances" = 1024;
      "fs.inotify.max_queued_events" = 32768;
+     "vm.max_map_count" = 262144;
   };
+
+  fileSystems."/".options = [ "noatime" "nodiratime" "discard" ];
 }

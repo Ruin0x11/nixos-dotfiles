@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs, ... }:
 
 {
    imports = [
@@ -18,14 +18,17 @@
     dos2unix
     duplicity
     elinks
+    fd
     file
     gitAndTools.gitFull
     gnumake
     gnupg
-    unstable.home-manager
+    # unstable.home-manager
     htop
+    hub 
     lsof
     ncurses
+    ncmpcpp
     nix-prefetch-scripts
     nmap
     openssl
@@ -33,6 +36,7 @@
     pciutils
     pmutils
     psmisc
+    ripgrep
     stdenv
     strace
     sudo
@@ -46,8 +50,22 @@
     youtube-dl
     zip
     zsh
+    zsh-history-substring-search
     unrar 
+    docker
+    docker-compose
+    rxvt_unicode.terminfo
   ];
 
-  programs.zsh.enable = true;
+  programs.zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      ohMyZsh.enable = true;
+      ohMyZsh.plugins = [ "git" ];
+      ohMyZsh.theme = "frisk";
+      syntaxHighlighting.enable = true;
+      interactiveShellInit = ''
+        source "${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+      '';
+  };
 }
