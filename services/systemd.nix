@@ -25,7 +25,7 @@
   systemd.services.szurubooru = {
     wantedBy = [ "multi-user.target" ];
     description = "Run szurubooru docker services at startup";
-    after = [ "docker.service" "network-online.target" ];
+    after = [ "noriServer.service" "docker.service" "network-online.target" ];
     requires = [ "docker.service" "network-online.target" ];
     path = [ pkgs.docker pkgs.docker-compose ];
 

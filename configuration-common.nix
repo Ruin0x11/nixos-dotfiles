@@ -71,7 +71,10 @@
   services.logind.extraConfig = ''
      KillUserProcesses=no
   '';
- 
+
+  security.pam.services.sudo.nodelay = true;
+  security.pam.services.su.nodelay = true;
+
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "delete-older-than 30d";
