@@ -3,6 +3,7 @@
 {
   services.mpd = { 
      enable = true;
+     user = "nori";
 
      extraConfig = ''
        audio_output {
