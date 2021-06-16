@@ -6,7 +6,7 @@
       ./mpd.nix
       ./docker.nix
       ./zfs.nix
-      ./coredns.nix
+      ./dnsmasq.nix
       ./systemd.nix
    ];
 }

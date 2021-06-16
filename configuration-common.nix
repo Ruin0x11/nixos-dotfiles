@@ -21,12 +21,6 @@
   networking.interfaces.eno1.useDHCP = true;
   networking.interfaces.eno2.useDHCP = true;
 
-  networking.nameservers = [
-      "192.168.1.100"
-      "8.8.8.8"
-      "4.4.4.4"
-  ];
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
