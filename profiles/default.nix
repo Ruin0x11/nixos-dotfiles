@@ -26,6 +26,7 @@
     # unstable.home-manager
     htop
     hub 
+    iotop
     lsof
     ncurses
     ncmpcpp
