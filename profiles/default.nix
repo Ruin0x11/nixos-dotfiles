@@ -1,35 +1,38 @@
 { config, pkgs, nixpkgs, ... }:
 
 {
-   imports = [
-   
-   ];
+   imports = [];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    vim 
-    emacs
+    # unstable.home-manager
     aspell
     aspellDicts.en
+    beets
     bind # nslookup, dig
     curl
+    dhall
+    dhall-json
+    docker
+    docker-compose
     dos2unix
     duplicity
     elinks
+    emacs
     fd
     file
+    gdrive
     gitAndTools.gitFull
     gnumake
     gnupg
-    # unstable.home-manager
     htop
     hub 
     iotop
     lsof
-    ncurses
+    mpc_cli
     ncmpcpp
+    ncurses
     nix-prefetch-scripts
     nmap
     openssl
@@ -38,6 +41,8 @@
     pmutils
     psmisc
     ripgrep
+    rxvt_unicode.terminfo
+    sd
     stdenv
     strace
     sudo
@@ -45,17 +50,16 @@
     tcpdump
     tmux
     tree
+    unrar 
     unzip
     usbutils
+    vim 
+    wget
     wget
     youtube-dl
     zip
     zsh
     zsh-history-substring-search
-    unrar 
-    docker
-    docker-compose
-    rxvt_unicode.terminfo
   ];
 
   programs.zsh = {
