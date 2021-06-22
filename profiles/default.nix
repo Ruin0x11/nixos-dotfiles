@@ -12,6 +12,7 @@
     aspellDicts.en
     backblaze-b2
     beets
+    bfg-repo-cleaner
     bind # nslookup, dig
     curl
     dhall

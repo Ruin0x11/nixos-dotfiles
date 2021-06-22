@@ -20,8 +20,8 @@ in
       targetUrl = "b2://$B2_ACCOUNT:$B2_KEY@$B2_BUCKET/nori_all";
       frequency = "daily";
       fullIfOlderThan = "1M";
-      maxFull = 3;
-      extraFlags = "--no-encryption";
+      cleanup.maxFull = 3;
+      extraFlags = [ "--no-encryption" ];
 
       secretFile = "/etc/duplicity_secrets";
     };
