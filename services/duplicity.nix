@@ -17,16 +17,10 @@ in
         "/home/nori/build/script"
       ];
 
-      targetUrl = "b2://$B2_ACCOUNT:$B2_KEY@$B2_BUCKET/nori_all";
+      targetUrl = "b2://${secrets.duplicity.account}:${secrets.duplicity.key}@${secrets.duplicity.bucket}/nori_all";
       frequency = "daily";
       fullIfOlderThan = "1M";
       cleanup.maxFull = 3;
       extraFlags = [ "--no-encryption" ];
-
-      secretFile = "/etc/duplicity_secrets";
-    };
-    environment.etc."duplicity_secrets" = {
-      mode = "0555";
-      text = secrets.duplicitySecrets;
     };
   }
