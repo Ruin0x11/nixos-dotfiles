@@ -8,7 +8,9 @@
   environment.systemPackages = with pkgs; [
     # unstable.home-manager
     aspell
+    aria2
     aspellDicts.en
+    backblaze-b2
     beets
     bind # nslookup, dig
     curl
