@@ -6,12 +6,15 @@ in
     services.duplicity = { 
       enable = true;
 
-      exclude = [ "**/*" ];
+      exclude = [ "/**" ];
       include = [
-        "/home/nori"
+        "/home/nori/Documents"
         "/etc"
-        "/mnt/hibiki/config"
-        "/mnt/hibiki/back"
+        "/mnt/hibiki/config/szurubooru"
+        "/mnt/hibiki/config/szurupull"
+        "/mnt/hibiki/config/niacademy"
+        "/mnt/hibiki/config/shaarli"
+        "/mnt/hibiki/config/scribl"
         "/mnt/hibiki/picture/scrots"
         "/mnt/hibiki/elona"
         "/home/nori/build/script"

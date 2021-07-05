@@ -34,8 +34,10 @@
     iotop
     lsof
     mailutils
+    megatools
     mpc_cli
     msmtp
+    ncdu
     ncmpcpp
     ncurses
     nix-prefetch-scripts
