@@ -33,7 +33,9 @@
     hub 
     iotop
     lsof
+    mailutils
     mpc_cli
+    msmtp
     ncmpcpp
     ncurses
     nix-prefetch-scripts
@@ -43,6 +45,7 @@
     pciutils
     pmutils
     psmisc
+    ranger
     ripgrep
     rxvt_unicode.terminfo
     sd
