@@ -9,7 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./configuration-common.nix
-      ./machines/nori.nix
+      ./machines/sae.nix
+      ./users/sae.nix
+      ./profiles/sae.nix
     ];
 
   # Use the GRUB 2 boot loader.

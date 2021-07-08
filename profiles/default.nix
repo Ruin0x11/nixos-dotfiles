@@ -1,8 +1,6 @@
 { config, pkgs, nixpkgs, ... }:
 
 {
-   imports = [];
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -10,22 +8,14 @@
     aspell
     aria2
     aspellDicts.en
-    backblaze-b2
     beets
     bfg-repo-cleaner
     bind # nslookup, dig
     curl
-    dhall
-    dhall-json
-    docker
-    docker-compose
     dos2unix
-    duplicity
     elinks
-    emacs
     fd
     file
-    gdrive
     gitAndTools.gitFull
     gnumake
     gnupg
@@ -34,7 +24,6 @@
     iotop
     lsof
     mailutils
-    megatools
     mpc_cli
     msmtp
     ncdu

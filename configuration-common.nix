@@ -5,7 +5,6 @@
       ./channels.nix
       ./profiles/default.nix
       ./services/default.nix
-      ./users/nori.nix
    ];
 
   nixpkgs.config.allowUnfree = true;
@@ -18,8 +17,6 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.eno1.useDHCP = true;
-  networking.interfaces.eno2.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

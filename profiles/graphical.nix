@@ -3,39 +3,23 @@
 {
   services.xserver = {
      enable = true;
+     autorun = true;
      layout = "us";
      
      windowManager = {
-        i3.enable = true;
-        i3.package = pkgs.i3-gaps;
+        fluxbox.enable = true;
      };
      
      displayManager = {
-        startx.enable = true;
+        lightdm.enable = true;
+        #defaultSession = "none+jwm";
      };
 
      libinput.enable = true;
   };
 
-  
-  nixpkgs.config = {
-    chromium = {
-      jre = false;
-      enableGoogleTalkPlugin = true;
-      enableAdobeFlash = false;
-      enablePepperPDF = true;
-    };
-
-    firefox = {
-      jre = false;
-      enableGoogleTalkPlugin = true;
-      enableAdobeFlash = false;
-      enablePepperPDF = true;
-    };
-  };
-
   fonts = {
-    enableFontDir = true;
+    fontDir.enable = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts
@@ -79,11 +63,10 @@
     rxvt-unicode
     dmenu
     feh
-    i3blocks
     scrot
 
+    conky
     dunst
-    wireshark
     firefox
     gimp
     xfontsel

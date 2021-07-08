@@ -11,6 +11,9 @@
       allowedUDPPorts = [ 53 6600 ]; # DNS, mpd
       allowedTCPPorts = [ 53 6600 ];
     };
+
+    interfaces.eno1.useDHCP = true;
+    interfaces.eno2.useDHCP = true;
   };
 }
 
