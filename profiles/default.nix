@@ -50,7 +50,6 @@
     unrar 
     unzip
     usbutils
-    vim 
     wget
     wget
     youtube-dl

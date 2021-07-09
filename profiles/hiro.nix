@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    vim
     dhall
     dhall-json
     docker

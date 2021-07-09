@@ -1,5 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  cp = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // pkgs.dockapps);
+  cputnik = cp ../packages/cputnik.nix { };
+  wmsm-app = cp ../packages/wmsm-app.nix { };
+  wmnd = cp ../packages/wmnd.nix { };
+  wmbattery = cp ../packages/wmbattery.nix { };
+  wmitime = cp ../packages/wmitime.nix { };
+in
 {
   services.xserver = {
      enable = true;
@@ -7,7 +15,7 @@
      layout = "us";
      
      windowManager = {
-        fluxbox.enable = true;
+        windowmaker.enable = true;
      };
      
      displayManager = {
@@ -72,6 +80,15 @@
     xfontsel
     vimHugeX
     evince
+
+    dockapps.wmsystemtray
+    dockapps.AlsaMixer-app
+    dockapps.wmCalClock
+    cputnik
+    wmsm-app
+    wmnd
+    wmbattery
+    wmitime
   ];
 
   # Enable 3D acceleration for 32bit applications (e.g. wine)

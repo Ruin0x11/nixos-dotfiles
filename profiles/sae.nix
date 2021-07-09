@@ -12,7 +12,7 @@ let
     };
 
   my-emacs = (pkgs.emacsPackagesGen unstable.emacsGcc).emacsWithPackages
-    (epkgs: [ epkgs.exwm epkgs.emacsql-sqlite epkgs.vterm epkgs.pdf-tools ]);
+    (epkgs: [ ]);
 in
 {
   imports = [ ./graphical.nix ../cachix.nix ];
