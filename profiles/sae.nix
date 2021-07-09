@@ -26,5 +26,6 @@ in
     cachix
     luajit
     luajitPackages.luacheck
+    vips
   ];
 }

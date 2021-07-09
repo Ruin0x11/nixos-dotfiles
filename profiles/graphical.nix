@@ -7,6 +7,8 @@ let
   wmnd = cp ../packages/wmnd.nix { };
   wmbattery = cp ../packages/wmbattery.nix { };
   wmitime = cp ../packages/wmitime.nix { };
+  #wmsmixer = cp ../packages/wmsmixer.nix { };
+  wmacpi = cp ../packages/wmacpi.nix { };
 in
 {
   services.xserver = {
@@ -36,8 +38,9 @@ in
       fira-code
       font-awesome-ttf
       inconsolata
-      proggyfonts
+      kochi-substitute
       powerline-fonts
+      proggyfonts
       source-code-pro
       source-sans-pro
       source-serif-pro
@@ -80,6 +83,7 @@ in
     xfontsel
     vimHugeX
     evince
+    xcolor
 
     dockapps.wmsystemtray
     dockapps.AlsaMixer-app
@@ -89,6 +93,8 @@ in
     wmnd
     wmbattery
     wmitime
+    #wmsmixer
+    wmacpi
   ];
 
   # Enable 3D acceleration for 32bit applications (e.g. wine)
