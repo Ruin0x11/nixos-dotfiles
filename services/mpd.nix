@@ -8,6 +8,8 @@ in
       user = "nori";
 
       extraConfig = ''
+       audio_buffer_size   "20480"
+       buffer_before_play  "30%" 
        audio_output {
          type "pulse"
          name "Pulseaudio"

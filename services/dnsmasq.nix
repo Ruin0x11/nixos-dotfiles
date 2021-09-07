@@ -20,6 +20,7 @@
       server=8.8.4.4
       server=8.8.8.8
       address=/.nori.daikon/192.168.1.100
+      rebind-domain-ok=/plex.direct/
     '';
   };
 }

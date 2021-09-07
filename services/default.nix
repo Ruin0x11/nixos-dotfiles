@@ -10,5 +10,6 @@
       #./systemd.nix
       ./duplicity.nix
       ./smartd.nix
+      ./write.nix
    ];
 }

@@ -10,6 +10,7 @@
     aspell
     aria2
     aspellDicts.en
+    atop
     backblaze-b2
     beets
     bfg-repo-cleaner
@@ -20,6 +21,7 @@
     docker
     docker-compose
     dos2unix
+    dstat
     duplicity
     elinks
     emacs

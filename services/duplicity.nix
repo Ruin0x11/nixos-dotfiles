@@ -15,13 +15,14 @@ in
         "/mnt/hibiki/config/niacademy"
         "/mnt/hibiki/config/shaarli"
         "/mnt/hibiki/config/scribl"
+        "/mnt/hibiki/config/remotestorage"
         "/mnt/hibiki/picture/scrots"
         "/mnt/hibiki/elona"
         "/home/nori/build/script"
       ];
 
       targetUrl = "b2://${secrets.duplicity.account}:${secrets.duplicity.key}@${secrets.duplicity.bucket}/nori_all";
-      frequency = "daily";
+      frequency = "weekly";
       fullIfOlderThan = "1M";
       cleanup.maxFull = 3;
       extraFlags = [ "--no-encryption" ];
