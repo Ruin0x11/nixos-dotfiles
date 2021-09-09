@@ -4,6 +4,7 @@
    imports = [
       ./channels.nix
       ./profiles/default.nix
+      ./profiles/graphical-mpv.nix
       ./services/default.nix
       ./users/nori.nix
    ];
@@ -58,6 +59,7 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.systemWide = true;
   hardware.pulseaudio.extraConfig = "load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1";
 
   system.autoUpgrade.enable = true;

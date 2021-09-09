@@ -1,7 +1,7 @@
 { config, pkgs, nixpkgs, ... }:
 
 {
-   imports = [];
+  imports = [];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
