@@ -1,16 +1,21 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./graphical.nix ];
+  imports = [ 
+    ./graphical.nix 
+    # ../packages/firefox.nix
+  ];
 
   services.xserver = {
      windowManager = {
         i3.enable = true;
-        i3.package = pkgs.i3-gaps;
      };
      
      displayManager = {
-        startx.enable = true;
+        autoLogin = { 
+          enable = true; 
+          user = "yuno"; 
+        };
      };
   };
 
@@ -28,6 +33,7 @@
       terminus_font
       ubuntu_font_family
       vistafonts
+      kochi-substitute
     ];
   };
 
@@ -41,7 +47,6 @@
 
     dunst
     wireshark
-    firefox
     gimp
     xfontsel
     vimHugeX

@@ -7,6 +7,6 @@
      permitRootLogin = "no";
  
      passwordAuthentication = false;
-     challengeResponseAuthentication = false;
+     kbdInteractiveAuthentication = false;
   };
 }

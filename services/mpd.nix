@@ -5,7 +5,7 @@ in
   {
     services.mpd = { 
       enable = true;
-      user = "nori";
+      user = "yuno";
 
       extraConfig = ''
        audio_buffer_size   "20480"
@@ -18,7 +18,7 @@ in
       '';
 
       network.listenAddress = "any";
-      musicDirectory = "/home/nori/Music";
+      musicDirectory = "/home/yuno/Music";
     };
 
     services.mpdscribble = {

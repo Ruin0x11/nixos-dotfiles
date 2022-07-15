@@ -14,7 +14,7 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts
-      font-awesome-ttf
+      font-awesome
     ];
   };
 

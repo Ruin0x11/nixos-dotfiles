@@ -1,0 +1,3 @@
+[submodule "home/yuno/files/doom.d"]
+	path = home/yuno/files/doom.d
+	url = https://github.com/ruin0x11/doom.d

@@ -2,7 +2,6 @@
 
 let
   cp = pkgs.lib.callPackageWith (pkgs // pkgs.xorg // pkgs.libsForQt5);
-  flirc = cp ../packages/flirc.nix { };
 in
 {
   imports = [ ./graphical.nix ../packages/desktop-managers/rxvt-unicode.nix ];
@@ -76,8 +75,4 @@ EOF
     load-module module-combine-sink sink_name=combined
     set-default-sink combined
   '';
-
-  environment.systemPackages = with pkgs; [
-    flirc
-  ];
 }

@@ -6,7 +6,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # unstable.home-manager
+    home-manager
     aspell
     aria2
     aspellDicts.en
@@ -16,10 +16,6 @@
     bfg-repo-cleaner
     bind # nslookup, dig
     curl
-    dhall
-    dhall-json
-    docker
-    docker-compose
     dos2unix
     dstat
     duplicity
@@ -46,6 +42,7 @@
     nmap
     openssl
     p7zip
+    pamix
     pciutils
     pmutils
     psmisc
@@ -71,16 +68,4 @@
     zsh
     zsh-history-substring-search
   ];
-
-  programs.zsh = {
-      enable = true;
-      autosuggestions.enable = true;
-      ohMyZsh.enable = true;
-      ohMyZsh.plugins = [ "git" ];
-      ohMyZsh.theme = "frisk";
-      syntaxHighlighting.enable = true;
-      interactiveShellInit = ''
-        source "${pkgs.zsh-history-substring-search}/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
-      '';
-  };
 }

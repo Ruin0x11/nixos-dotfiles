@@ -1,11 +1,11 @@
 { config, pkgs, nixpkgs, ... }:
 
 {
-  nixpkgs.config.packageOverrides = pkgs: {
-    zfs = pkgs.zfs.override {
-      enableMail = true;
-    };
-  };
+  # nixpkgs.config.packageOverrides = pkgs: {
+  #   zfs = pkgs.zfs.override {
+  #     enableMail = true;
+  #   };
+  # };
 
   boot.supportedFilesystems = [ "zfs" ];
   services.zfs.autoScrub.enable = true;
